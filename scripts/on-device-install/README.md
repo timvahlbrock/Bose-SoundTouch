@@ -42,7 +42,13 @@ ssh -L 8000:localhost:8000 root@<IP_ADDRESS_OF_SPEAKER>
 
 ## Updating AfterTouch
 
-To update AfterTouch, simply run the installation command again. The installer will check if there's a new version available and update it if necessary.
+In theory updating AfterTouch is just running the installation script again, setting `VERSION` to the newest version (if that hasn't been done in the latest install script already).
+
+```bash
+export VERSION=0.123.0
+```
+
+In practice, you will almost certainly run into space issues, even if you delete the old binary before. We are currently working on a solution for this.
 
 ## Uninstallation
 
